@@ -1,1 +1,1 @@
-kubectl apply -k . --server-side --force-conflicts
+kubectl kustomize --enable-helm | kubectl apply --server-side --force-conflicts -f -
