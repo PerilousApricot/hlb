@@ -20,6 +20,10 @@ helmCharts:
   releaseName: argocd
   version: 10.2.2
   repo: https://argoproj.github.io/argo-helm
+
+patches:
+  - path: enable_helm.yaml
+
 namespace: hlb
 
 #  - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
