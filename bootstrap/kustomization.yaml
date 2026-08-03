@@ -12,11 +12,11 @@ helmCharts:
     server:
       ingress:
         enabled: true
-        tls: true
+        tls: false
         ingressClassName: haproxy
       ingressGrpc:
         enabled: true
-        tls: true
+        tls: false
         ingressClassName: haproxy
 
   releaseName: argocd
