@@ -13,9 +13,11 @@ helmCharts:
       ingress:
         enabled: true
         tls: true
+        ingressClassName: haproxy
       ingressGrpc:
         enabled: true
         tls: true
+        ingressClassName: haproxy
 
   releaseName: argocd
   version: 10.2.2
