@@ -8,9 +8,6 @@ helmCharts:
     valuesInLine:
       crds:
         enabled: true
-      global:
-        leaderElection:
-          namespace: cert-manager
 resources:
   - cloudflare-secret.yaml
   - cloudflare-issuer.yaml
