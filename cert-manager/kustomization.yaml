@@ -1,0 +1,16 @@
+namespace: hlb
+helmCharts:
+  - name: cert-manager
+    repo: oci://quay.io/jetstack/charts/
+    version: v1.21.1
+    namespace: cert-manager
+    releaseName: cert-manager
+    valuesInLine:
+      crds:
+        enabled: true
+      global:
+        leaderElection:
+          namespace: cert-manager
+resources:
+  - cloudflare-secret.yaml
+  - cloudflare-issuer.yaml
