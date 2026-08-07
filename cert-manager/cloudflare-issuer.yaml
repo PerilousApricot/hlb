@@ -13,7 +13,7 @@ spec:
         cloudflare:
           apiTokenSecretRef:
             name: cloudflare-api-token-secret
-            key: apiToken
+            key: api-token
       selector:
         dnsNames:
           - "melo.photos"
