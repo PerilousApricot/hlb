@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: metallb-test
+spec:
+  destination:
+    namespace: hlb
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://metallb.github.io/metallb
+    targetRevision: 0.16.1
+    chart: metallb
+  sources: []
+  project: default

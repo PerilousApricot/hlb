@@ -1,0 +1,9 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: first-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 172.28.0.64-172.28.0.89
+  - fd35:efdd:a8ea::beef:1-fd35:efdd:a8ea::beef:eeee
