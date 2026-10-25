@@ -2,7 +2,7 @@ apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
   name: first-pool
-  namespace: metallb-system
+  namespace: hlb
 spec:
   addresses:
   - 172.28.0.64-172.28.0.89
