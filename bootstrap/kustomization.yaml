@@ -7,7 +7,10 @@ resources:
   - namespace.yaml
 
 patches:
-#  - path: enable_helm.yaml
+  - path: enable_helm.yaml
+    target:
+      kind: ConfigMap
+      name: argocd-cm
   - patch: |-
       - op: replace
         path: /subjects/0/namespace
