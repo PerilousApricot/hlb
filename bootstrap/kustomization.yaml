@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: hlb
 resources:
   - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-  - namespace.yaml
+#  - namespace.yaml
 
 patches:
   - path: enable_helm.yaml
