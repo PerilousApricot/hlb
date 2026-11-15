@@ -7,10 +7,10 @@ resources:
   - namespace.yaml
 
 patches:
-  - path: enable_helm.yaml
-#  - patch: |-
-#      - op: replace
-#        path: /subjects/0/namespace
-#        value: hlb
-#    target:
-#      kind: ClusterRoleBinding
+#  - path: enable_helm.yaml
+  - patch: |-
+      - op: replace
+        path: /subjects/0/namespace
+        value: hlb
+    target:
+      kind: ClusterRoleBinding
