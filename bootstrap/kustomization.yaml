@@ -1,40 +1,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-helmCharts:
-- name: argo-cd
-  includeCRDs: true
-  valuesInline:
-    global:
-      domain: argocd.partymansion.biz
-      dualStack: 
-        ipFamilyPolicy: PreferDualStack
-    server:
-      ingress:
-        enabled: true
-        tls: false
-        ingressClassName: haproxy
-      ingressGrpc:
-        enabled: true
-        tls: false
-        ingressClassName: haproxy
-
-  releaseName: argocd
-  version: 10.2.2
-  repo: https://argoproj.github.io/argo-helm
+namespace: hlb
+resources:
+  - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+  - namespace.yaml
 
 patches:
   - path: enable_helm.yaml
-
-namespace: hlb
-
-#  - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-#
-#
-#patches:
-#  - patch: |-
-#      - op: replace
-#        path: /subjects/0/namespace
-#        value: argocd
-#    target:
-#      kind: ClusterRoleBinding
+  - patch: |-
+      - op: replace
+        path: /subjects/0/namespace
+        value: hlb
+    target:
+      kind: ClusterRoleBinding
