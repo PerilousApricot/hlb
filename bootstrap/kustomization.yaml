@@ -6,8 +6,8 @@ resources:
   - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 #  - namespace.yaml
 
-patches:
-  - path: enable_helm.yaml
+#patches:
+#  - path: enable_helm.yaml
 #  - patch: |-
 #      - op: replace
 #        path: /subjects/0/namespace
