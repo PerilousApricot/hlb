@@ -8,10 +8,13 @@ spec:
     namespace: hlb
     server: https://kubernetes.default.svc
   project: default
-  source:
-    path: bootstrap
-    repoURL: https://github.com/perilousApricot/hlb
-    targetRevision: HEAD
+  sources:
+  -  path: bootstrap
+     repoURL: https://github.com/perilousApricot/hlb
+     targetRevision: HEAD
+  -  path: applications-content/argocd/overlays/mac
+     repoURL: https://github.com/perilousApricot/hlb
+     targetRevision: HEAD
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
