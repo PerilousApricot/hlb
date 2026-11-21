@@ -12,7 +12,7 @@ spec:
   -  path: bootstrap
      repoURL: https://github.com/perilousApricot/hlb
      targetRevision: HEAD
-  -  path: applications-content/argocd/overlays/mac
+  -  path: applications-content/argocd/overlays/{{ .Values.variant }}
      repoURL: https://github.com/perilousApricot/hlb
      targetRevision: HEAD
   syncPolicy:
