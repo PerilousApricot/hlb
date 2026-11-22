@@ -13,7 +13,8 @@ spec:
     targetRevision: 1.104.7
     helm:
       parameters:
-        hostname: k8s-operator-{{ .Values.variant }}
+      - name: hostname
+        value: k8s-operator-{{ .Values.variant }}
     chart: tailscale-operator
   - path: applications-content/tailscale/overlays/{{ .Values.variant }}
     repoURL: https://github.com/perilousApricot/hlb
